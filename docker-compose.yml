@@ -1,0 +1,18 @@
+---
+version: '3.3'
+
+services:
+  csgo-dedicated:
+    image: no42org/csgo-ds
+    container_name: csgo-ds
+    environment:
+      - GSLT=GSLT=D9F5CDD18ACFD75EEFECA4227C71445E
+    volumes:
+      - ./csgo-ds:/home/steam/csgo-ds
+    command: ["/entrypoint.sh", "-s"]
+    ports:
+      - "27015:27015/udp"
+      - "27015:27015/tcp"
+      - "27016:27016/udp"
+      - "27016:27016/tcp"
+

@@ -19,14 +19,14 @@ init() {
 
 start(){
   ${STEAM_CSGO_DIR}/srcds_run \
-     -net_port_try 1 \
      -game csgo \
      -usercon \
-     +game_type 0 \
+     +game_type 1 \
      +game_mode 1 \
      +mapgroup mg_bomb \
      +map de_dust2 \
-     +sv_setsteamaccount "${GSLT}"  
+     +sv_setsteamaccount "${GSLT}" \
+     +sv_lan 1
 }
 
 # Evaluate arguments for build script.
